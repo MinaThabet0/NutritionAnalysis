@@ -1,0 +1,34 @@
+PODS:
+  - Alamofire (5.4.1)
+  - MBProgressHUD (1.2.0)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - Nuke (9.4.1)
+  - SwiftLint (0.43.1)
+
+DEPENDENCIES:
+  - MBProgressHUD
+  - Moya
+  - Nuke
+  - SwiftLint
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - MBProgressHUD
+    - Moya
+    - Nuke
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  Nuke: ca782d1a417904db70f2c65d6feb2329a2679491
+  SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
+
+PODFILE CHECKSUM: 2f4c856adea33455b006ef1ce54e7285de326f28
+
+COCOAPODS: 1.10.1
