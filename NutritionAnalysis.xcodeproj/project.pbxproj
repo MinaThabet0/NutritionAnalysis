@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		681E937B261159CA00785787 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681E937A261159CA00785787 /* UIViewController+Extension.swift */; };
+		681E93A42611697E00785787 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681E93A32611697E00785787 /* UIButton+Extension.swift */; };
 		686350F2260FD44000F66ADD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686350F1260FD44000F66ADD /* AppDelegate.swift */; };
 		686350F4260FD44000F66ADD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686350F3260FD44000F66ADD /* SceneDelegate.swift */; };
 		686350F9260FD44000F66ADD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 686350F7260FD44000F66ADD /* Main.storyboard */; };
@@ -14,6 +16,13 @@
 		686350FE260FD44100F66ADD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 686350FC260FD44100F66ADD /* LaunchScreen.storyboard */; };
 		68635109260FD44100F66ADD /* NutritionAnalysisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68635108260FD44100F66ADD /* NutritionAnalysisTests.swift */; };
 		68635114260FD44100F66ADD /* NutritionAnalysisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68635113260FD44100F66ADD /* NutritionAnalysisUITests.swift */; };
+		6876DA7F26125569006D89E1 /* IngredientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6876DA7D26125569006D89E1 /* IngredientCell.swift */; };
+		6876DA8026125569006D89E1 /* IngredientCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6876DA7E26125569006D89E1 /* IngredientCell.xib */; };
+		6876DA8526125D87006D89E1 /* NutritionDetailedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6876DA8426125D87006D89E1 /* NutritionDetailedViewModel.swift */; };
+		6876DA8A261295C1006D89E1 /* TotalNutrientsKCal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6876DA89261295C1006D89E1 /* TotalNutrientsKCal.swift */; };
+		6876DAA52612A4A0006D89E1 /* MockNutritionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6876DAA42612A4A0006D89E1 /* MockNutritionDetail.swift */; };
+		6876DAAA2612A6DD006D89E1 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6876DAA92612A6DD006D89E1 /* MockService.swift */; };
+		6876DAB52612AD81006D89E1 /* NewRecipeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6876DAB42612AD81006D89E1 /* NewRecipeViewModelTests.swift */; };
 		68C077BC260FDBE400288022 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C077BB260FDBE400288022 /* Config.swift */; };
 		68C077C4260FE2F600288022 /* EdamamApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C077C3260FE2F600288022 /* EdamamApi.swift */; };
 		68C077CB260FE32B00288022 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C077C8260FE32B00288022 /* UICollectionView+Extension.swift */; };
@@ -62,6 +71,8 @@
 		2A96C9CF8BE549DF7B2685E9 /* Pods-NutritionAnalysis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NutritionAnalysis.debug.xcconfig"; path = "Target Support Files/Pods-NutritionAnalysis/Pods-NutritionAnalysis.debug.xcconfig"; sourceTree = "<group>"; };
 		5239FA0830A32EC4A527B172 /* Pods_NutritionAnalysis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NutritionAnalysis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56403CE78ACD5CC60DA0C1B1 /* Pods-NutritionAnalysis-NutritionAnalysisUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NutritionAnalysis-NutritionAnalysisUITests.debug.xcconfig"; path = "Target Support Files/Pods-NutritionAnalysis-NutritionAnalysisUITests/Pods-NutritionAnalysis-NutritionAnalysisUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		681E937A261159CA00785787 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		681E93A32611697E00785787 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		686350EE260FD44000F66ADD /* NutritionAnalysis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutritionAnalysis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		686350F1260FD44000F66ADD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		686350F3260FD44000F66ADD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +86,13 @@
 		6863510F260FD44100F66ADD /* NutritionAnalysisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NutritionAnalysisUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68635113260FD44100F66ADD /* NutritionAnalysisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionAnalysisUITests.swift; sourceTree = "<group>"; };
 		68635115260FD44100F66ADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6876DA7D26125569006D89E1 /* IngredientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientCell.swift; sourceTree = "<group>"; };
+		6876DA7E26125569006D89E1 /* IngredientCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientCell.xib; sourceTree = "<group>"; };
+		6876DA8426125D87006D89E1 /* NutritionDetailedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionDetailedViewModel.swift; sourceTree = "<group>"; };
+		6876DA89261295C1006D89E1 /* TotalNutrientsKCal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TotalNutrientsKCal.swift; sourceTree = "<group>"; };
+		6876DAA42612A4A0006D89E1 /* MockNutritionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNutritionDetail.swift; sourceTree = "<group>"; };
+		6876DAA92612A6DD006D89E1 /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
+		6876DAB42612AD81006D89E1 /* NewRecipeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecipeViewModelTests.swift; sourceTree = "<group>"; };
 		68C077BB260FDBE400288022 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		68C077C3260FE2F600288022 /* EdamamApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdamamApi.swift; sourceTree = "<group>"; };
 		68C077C8260FE32B00288022 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
@@ -192,7 +210,10 @@
 		68635107260FD44100F66ADD /* NutritionAnalysisTests */ = {
 			isa = PBXGroup;
 			children = (
+				6876DAB42612AD81006D89E1 /* NewRecipeViewModelTests.swift */,
 				68635108260FD44100F66ADD /* NutritionAnalysisTests.swift */,
+				6876DAA92612A6DD006D89E1 /* MockService.swift */,
+				6876DAA42612A4A0006D89E1 /* MockNutritionDetail.swift */,
 				6863510A260FD44100F66ADD /* Info.plist */,
 			);
 			path = NutritionAnalysisTests;
@@ -205,6 +226,30 @@
 				68635115260FD44100F66ADD /* Info.plist */,
 			);
 			path = NutritionAnalysisUITests;
+			sourceTree = "<group>";
+		};
+		6876DA7A26125522006D89E1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6876DA7D26125569006D89E1 /* IngredientCell.swift */,
+				6876DA7E26125569006D89E1 /* IngredientCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6876DA7B26125533006D89E1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		6876DA7C26125543006D89E1 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				68C077D9260FE61E00288022 /* IngredientSummaryViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		68C077B3260FDB6100288022 /* Service */ = {
@@ -223,6 +268,8 @@
 				68C077C8260FE32B00288022 /* UICollectionView+Extension.swift */,
 				68C077C9260FE32B00288022 /* UITableView+Extension.swift */,
 				68C0785726100DA400288022 /* String+Extension.swift */,
+				681E937A261159CA00785787 /* UIViewController+Extension.swift */,
+				681E93A32611697E00785787 /* UIButton+Extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -237,6 +284,7 @@
 				68C0783F2610038B00288022 /* TotalDaily.swift */,
 				68C0783B2610038B00288022 /* TotalNutrients.swift */,
 				68C0784D2610040C00288022 /* NutrientQuantity.swift */,
+				6876DA89261295C1006D89E1 /* TotalNutrientsKCal.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -273,7 +321,9 @@
 		68C077D2260FE46000288022 /* IngredientSummaryScene */ = {
 			isa = PBXGroup;
 			children = (
-				68C077D9260FE61E00288022 /* IngredientSummaryViewController.swift */,
+				6876DA7B26125533006D89E1 /* ViewModels */,
+				6876DA7A26125522006D89E1 /* Views */,
+				6876DA7C26125543006D89E1 /* ViewController */,
 			);
 			path = IngredientSummaryScene;
 			sourceTree = "<group>";
@@ -298,6 +348,7 @@
 			isa = PBXGroup;
 			children = (
 				68C077E8260FF27C00288022 /* NewRecipeViewModel.swift */,
+				6876DA8426125D87006D89E1 /* NutritionDetailedViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -410,6 +461,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6876DA8026125569006D89E1 /* IngredientCell.xib in Resources */,
 				686350FE260FD44100F66ADD /* LaunchScreen.storyboard in Resources */,
 				686350FB260FD44100F66ADD /* Assets.xcassets in Resources */,
 				686350F9260FD44000F66ADD /* Main.storyboard in Resources */,
@@ -544,14 +596,18 @@
 				68C0785826100DA400288022 /* String+Extension.swift in Sources */,
 				68C077D5260FE60C00288022 /* NewRecipeViewController.swift in Sources */,
 				68C077DA260FE61E00288022 /* IngredientSummaryViewController.swift in Sources */,
+				6876DA8A261295C1006D89E1 /* TotalNutrientsKCal.swift in Sources */,
+				6876DA8526125D87006D89E1 /* NutritionDetailedViewModel.swift in Sources */,
 				68C077CD260FE32B00288022 /* Bindable.swift in Sources */,
 				68C0784E2610040C00288022 /* NutrientQuantity.swift in Sources */,
 				68C0785326100BB300288022 /* ApiNetworkManager.swift in Sources */,
 				68C078422610038B00288022 /* Nutrients.swift in Sources */,
+				6876DA7F26125569006D89E1 /* IngredientCell.swift in Sources */,
 				68C078412610038B00288022 /* NutritionDetailed.swift in Sources */,
 				68C077CB260FE32B00288022 /* UICollectionView+Extension.swift in Sources */,
 				68C077E9260FF27C00288022 /* NewRecipeViewModel.swift in Sources */,
 				68C078432610038B00288022 /* Ingredients.swift in Sources */,
+				681E937B261159CA00785787 /* UIViewController+Extension.swift in Sources */,
 				68C077C4260FE2F600288022 /* EdamamApi.swift in Sources */,
 				686350F4260FD44000F66ADD /* SceneDelegate.swift in Sources */,
 				68C077E4260FEA2900288022 /* Utils.swift in Sources */,
@@ -560,6 +616,7 @@
 				68C078492610039A00288022 /* Parsed.swift in Sources */,
 				68C078442610038B00288022 /* TotalDaily.swift in Sources */,
 				68C077CC260FE32B00288022 /* UITableView+Extension.swift in Sources */,
+				681E93A42611697E00785787 /* UIButton+Extension.swift in Sources */,
 				68C077DF260FE62C00288022 /* NutritionFactsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -569,6 +626,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				68635109260FD44100F66ADD /* NutritionAnalysisTests.swift in Sources */,
+				6876DAB52612AD81006D89E1 /* NewRecipeViewModelTests.swift in Sources */,
+				6876DAA52612A4A0006D89E1 /* MockNutritionDetail.swift in Sources */,
+				6876DAAA2612A6DD006D89E1 /* MockService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,8 @@ target 'NutritionAnalysis' do
   pod 'MBProgressHUD'
   pod 'Nuke'
   pod 'SwiftLint'
+  pod 'SwiftMessages'
+  pod 'IQKeyboardManagerSwift'
 
   target 'NutritionAnalysisTests' do
     inherit! :search_paths

@@ -6,13 +6,23 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 class NewRecipeViewController: UIViewController {
     
     //MARK:- IBOutlet
     @IBOutlet weak var textViewContainer: UIView!
-    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var textView: UITextView! {
+        didSet {
+            textView.delegate = self
+        }
+    }
     @IBOutlet weak var analyzeButton: UIButton!
+    
+    // MARK:- Variables
+    lazy var viewModel: NewRecipeViewModel = {
+       return NewRecipeViewModel()
+    }()
 
     //MARK:- Controller life cycle
     override func viewDidLoad() {
@@ -24,17 +34,8 @@ class NewRecipeViewController: UIViewController {
     }
     
     @IBAction func analyzeAction(_ sender: Any) {
+        viewModel.analyze()
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
@@ -44,6 +45,7 @@ extension NewRecipeViewController {
     func initView() {
         setSetupTextViewContainer()
         setupAnalyzeBtn()
+        bindViewModel()
     }
     
     func setSetupTextViewContainer() {
@@ -52,5 +54,39 @@ extension NewRecipeViewController {
     
     func setupAnalyzeBtn() {
         analyzeButton.setCornerRadius(corderRadius: 10)
+    }
+    
+    func bindViewModel() {
+        viewModel.showLoading.bind { [weak self] visible in
+            if let `self` = self {
+                visible ? self.showIndicator(withTitle: "Indicator", and: "fetching details") : self.hideIndicator()
+            }
+        }
+
+        viewModel.updateAnalyzeButtonState = { [weak self] state in
+            state ? self?.analyzeButton.enableButton() : self?.analyzeButton.disableButton()
+        }
+
+        viewModel.navigate = { [weak self] nutritionDetailedViewModel in
+            guard let self = self else {
+                 return
+             }
+            let vc = NutritionFactsViewController.instantiate(fromAppStoryboard: .MAIN)
+            vc.nutritionDetailedViewModel = nutritionDetailedViewModel
+            self.navigationController?.pushViewController(vc, animated: true)
+
+        }
+
+        viewModel.onShowError = { message in
+            displayMessage(message: message, messageError: true)
+        }
+    }
+    
+}
+
+// MARK:- UI Text View Delegate
+extension NewRecipeViewController: UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        viewModel.ingredient = textView.text ?? ""
     }
 }

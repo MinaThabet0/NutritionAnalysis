@@ -22,6 +22,7 @@ struct NutritionDetailed : Codable {
 	let cautions : [String]?
 	let totalNutrients : TotalNutrients?
 	let totalDaily : TotalDaily?
+    let totalNutrientsKCal : TotalNutrientsKCal?
 	let ingredients : [Ingredients]?
 
 	enum CodingKeys: String, CodingKey {
@@ -35,6 +36,7 @@ struct NutritionDetailed : Codable {
 		case cautions = "cautions"
 		case totalNutrients = "totalNutrients"
 		case totalDaily = "totalDaily"
+        case totalNutrientsKCal = "totalNutrientsKCal"
 		case ingredients = "ingredients"
 	}
 
@@ -50,6 +52,21 @@ struct NutritionDetailed : Codable {
 		totalNutrients = try values.decodeIfPresent(TotalNutrients.self, forKey: .totalNutrients)
 		totalDaily = try values.decodeIfPresent(TotalDaily.self, forKey: .totalDaily)
 		ingredients = try values.decodeIfPresent([Ingredients].self, forKey: .ingredients)
+        totalNutrientsKCal = try values.decodeIfPresent(TotalNutrientsKCal.self, forKey: .totalNutrientsKCal)
 	}
+    
+    init(calories: Int,totalWeight: Double) {
+        self.uri = ""
+        self.yield = nil
+        self.calories = calories
+        self.totalWeight = totalWeight
+        self.dietLabels = nil
+        self.healthLabels = nil
+        self.cautions = nil
+        self.totalNutrients = nil
+        self.totalDaily = nil
+        self.totalNutrientsKCal = nil
+        self.ingredients = nil
+    }
 
 }

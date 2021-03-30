@@ -37,11 +37,19 @@ extension EdamamApi: TargetType {
     var task: Task {
         switch self {
         case .nutritionDetails(let ingr):
-            return .requestCompositeParameters(bodyParameters: [Params.title: EdamamConfig.title ,Params.ingr: ingr], bodyEncoding: JSONEncoding.default, urlParameters: [Params.appId: EdamamConfig.appId, Params.apiKey: EdamamConfig.apiKey] )
+
+            var ulrParameters = [String: Any]()
+            ulrParameters[Params.appId] = EdamamConfig.appId
+            ulrParameters[Params.apiKey] = EdamamConfig.apiKey
+
+            var bodyParameters = [String: Any]()
+            bodyParameters[Params.ingr] = ingr
+            
+            return .requestCompositeParameters(bodyParameters: bodyParameters, bodyEncoding: JSONEncoding.default, urlParameters: ulrParameters)
         }
     }
     
     var headers: [String: String]? {
-        nil
+        return ["Content-Type": "application/json"]
     }
 }

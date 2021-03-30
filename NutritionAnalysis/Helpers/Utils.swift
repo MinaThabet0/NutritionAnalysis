@@ -7,6 +7,34 @@
 
 import Foundation
 import UIKit
+import SwiftMessages
+
+
+//MARK: - handle message toast
+public func displayMessage(message: String, messageError: Bool) {
+    
+    let view = MessageView.viewFromNib(layout: .cardView)
+    if messageError == true {
+        view.configureTheme(.error)
+        view.configureTheme(backgroundColor: UIColor.systemRed, foregroundColor: .white)
+    } else {
+        view.configureTheme(.success)
+        view.configureTheme(backgroundColor: UIColor.systemGray, foregroundColor: .white)
+        //view.alpha = 0.8
+    }
+    
+    //view.iconImageView?.isHidden = true
+    //view.iconLabel?.isHidden = true
+    view.titleLabel?.isHidden = true
+    view.bodyLabel?.text = message
+    view.titleLabel?.textColor = UIColor.white
+    view.bodyLabel?.textColor = UIColor.white
+    view.button?.isHidden = true
+    view.alpha = 0.9
+    var config = SwiftMessages.Config()
+    config.presentationStyle = .bottom
+    SwiftMessages.show(config: config, view: view)
+}
 
 extension UIView {
 	/// Sets shadow for a UIView
