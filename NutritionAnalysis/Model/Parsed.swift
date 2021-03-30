@@ -45,5 +45,16 @@ struct Parsed : Codable {
 		retainedWeight = try values.decodeIfPresent(Double.self, forKey: .retainedWeight)
 		nutrients = try values.decodeIfPresent(Nutrients.self, forKey: .nutrients)
 	}
+    
+    init(quantity : Int, measure : String, food : String, weight : Double,nutrients : Nutrients) {
+        self.quantity = quantity
+        self.measure = measure
+        self.foodMatch = ""
+        self.food = food
+        self.foodId = ""
+        self.weight = weight
+        self.retainedWeight = 0
+        self.nutrients = nutrients
+    }
 
 }

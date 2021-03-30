@@ -23,6 +23,12 @@ class NewRecipeViewModelTests: XCTestCase {
         XCTAssertTrue(!viewModel.showLoading.value)
         XCTAssertEqual(viewModel.ingredient?.lines, ["1 cup rice","10 oz chickpeas"])
         XCTAssertTrue((viewModel.nutritionDetailedViewModel != nil))
+        XCTAssertEqual(viewModel.nutritionDetailedViewModel?.totalFat, 18.0)
+        XCTAssertEqual(viewModel.nutritionDetailedViewModel?.totalFatDaily, 28)
+        XCTAssertEqual(viewModel.nutritionDetailedViewModel?.totalCarbs, 333.0)
+        XCTAssertEqual(viewModel.nutritionDetailedViewModel?.totalCarbsDaily, 111.0)
+        XCTAssertEqual(viewModel.nutritionDetailedViewModel?.totalProtein, 71.0)
+        XCTAssertEqual(viewModel.nutritionDetailedViewModel?.totalProteinDaily, 142.0)
     }
     
     func testNilFetchData() {

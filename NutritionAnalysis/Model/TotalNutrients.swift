@@ -108,5 +108,37 @@ struct TotalNutrients : Codable {
 		tOCPHA = try values.decodeIfPresent(NutrientQuantity.self, forKey: .tOCPHA)
 		vITK1 = try values.decodeIfPresent(NutrientQuantity.self, forKey: .vITK1)
 	}
+    
+    init(fAT: NutrientQuantity, carb: NutrientQuantity, protein: NutrientQuantity) {
+        eNERC_KCAL = nil
+        self.fAT = fAT
+        fASAT = nil
+        fATRN = nil
+        fAMS = nil
+        fAPU = nil
+        self.cHOCDF = carb
+        fIBTG = nil
+        sUGAR = nil
+        self.pROCNT = protein
+        cHOLE = nil
+        nA = nil
+        cA = nil
+        mG = nil
+        k = nil
+        fE = nil
+        zN = nil
+        p = nil
+        vITA_RAE = nil
+        vITC = nil
+        tHIA = nil
+        rIBF = nil
+        nIA = nil
+        vITB6A = nil
+        fOL = nil
+        vITB12 = nil
+        vITD = nil
+        tOCPHA = nil
+        vITK1 = nil
+    }
 
 }

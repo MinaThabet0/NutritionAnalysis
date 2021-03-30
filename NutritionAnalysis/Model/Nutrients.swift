@@ -87,5 +87,30 @@ struct Nutrients : Codable {
 		fAMS = try values.decodeIfPresent(NutrientQuantity.self, forKey: .fAMS)
 		fAPU = try values.decodeIfPresent(NutrientQuantity.self, forKey: .fAPU)
 	}
+    
+    init(eNERC_KCAL : NutrientQuantity) {
+        self.pROCNT = nil
+        fAT = nil
+        self.eNERC_KCAL = eNERC_KCAL
+        cA = nil
+        fE = nil
+        mG = nil
+        p = nil
+        k = nil
+        nA = nil
+        zN = nil
+        vITD = nil
+        vITC = nil
+        tHIA = nil
+        rIBF = nil
+        nIA = nil
+        vITB6A = nil
+        fOL = nil
+        vITB12 = nil
+        cHOLE = nil
+        fASAT = nil
+        fAMS = nil
+        fAPU = nil
+    }
 
 }

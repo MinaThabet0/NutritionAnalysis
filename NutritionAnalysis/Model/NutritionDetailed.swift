@@ -55,7 +55,7 @@ struct NutritionDetailed : Codable {
         totalNutrientsKCal = try values.decodeIfPresent(TotalNutrientsKCal.self, forKey: .totalNutrientsKCal)
 	}
     
-    init(calories: Int,totalWeight: Double) {
+    init(calories: Int, totalWeight: Double, totalNutrients: TotalNutrients, totalDaily : TotalDaily) {
         self.uri = ""
         self.yield = nil
         self.calories = calories
@@ -63,8 +63,8 @@ struct NutritionDetailed : Codable {
         self.dietLabels = nil
         self.healthLabels = nil
         self.cautions = nil
-        self.totalNutrients = nil
-        self.totalDaily = nil
+        self.totalNutrients = totalNutrients
+        self.totalDaily = totalDaily
         self.totalNutrientsKCal = nil
         self.ingredients = nil
     }

@@ -25,4 +25,10 @@ struct NutrientQuantity : Codable {
         quantity = try values.decodeIfPresent(Double.self, forKey: .quantity)
         unit = try values.decodeIfPresent(String.self, forKey: .unit)
     }
+    
+    init(label: String, quantity: Double, unit: String) {
+        self.label = label
+        self.quantity = quantity
+        self.unit = unit
+    }
 }

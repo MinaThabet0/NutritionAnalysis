@@ -28,4 +28,8 @@ struct Ingredients : Codable {
 		parsed = try values.decodeIfPresent([Parsed].self, forKey: .parsed)
 	}
 
+    init(text : String, parsed : [Parsed]) {
+        self.text = text
+        self.parsed = parsed
+    }
 }
